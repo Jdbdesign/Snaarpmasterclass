@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+*.tsbuildinfo
+next-env.d.ts
+_x
+scripts/shots
+dev.log
+*.png.tmp
+cs-*.png
+cd-*.png
+lb-*.png
+AI Sales Growth Masterclass.html
