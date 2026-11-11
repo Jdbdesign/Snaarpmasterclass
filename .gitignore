@@ -11,3 +11,9 @@ cs-*.png
 cd-*.png
 lb-*.png
 AI Sales Growth Masterclass.html
+scripts/qa-server.log
+scripts/qa-*.mjs
+scripts/agile-qa/
+scripts/hr/
+scripts/qa/
+reference/
