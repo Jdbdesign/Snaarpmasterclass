@@ -6,7 +6,7 @@ import { BuildingArt } from "./ContractsArt";
 import CountrySelect from "./CountrySelect";
 import EventCountdown from "./EventCountdown";
 import { IcArrow, IcAward, IcCalendar, IcCheck, IcClock, IcLaptop, IcLayers, IcShieldCheck } from "./contractsIcons";
-import { IcBarChart, IcCap, IcChipAI, IcGear, IcGroup, IcLaptopAI, IcTag, IcTarget, IcTools, PeopleGearArt } from "./hrIcons";
+import { IcBarChart, IcCap, IcChipAI, IcGear, IcGroup, IcLaptopAI, IcTag, IcTarget, IcTools } from "./hrIcons";
 import { useHrMasterclass } from "./useHrMasterclass";
 
 const FONT = "'Plus Jakarta Sans', system-ui, sans-serif";
@@ -218,10 +218,13 @@ export default function HrMasterclass({ heroOverlay = false, ctaPhoto = false }:
           <div className="hr-about-line"></div>
 
           <div id="why" className="hr-why" style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-            <PeopleGearArt className="hr-why-art" />
-            <div>
-              <h2 className="hr-h2" style={{ fontSize: "40px" }}>Why This Training Matters</h2>
-              <span className="hr-bar"></span>
+            <div className="hr-why-head">
+              <div>
+                <h2 className="hr-h2" style={{ fontSize: "40px" }}>Why This Training Matters</h2>
+                <span className="hr-bar"></span>
+              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img className="hr-why-art" src="/hr/team.svg" alt="" aria-hidden="true" />
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
               {WHY.map((t) => (
