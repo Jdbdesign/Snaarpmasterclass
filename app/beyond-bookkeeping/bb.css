@@ -1,0 +1,115 @@
+/* Agile Project Management masterclass page only. Every selector is prefixed .bb- so nothing here can touch the other pages.
+   Shared look (buttons, inputs, .wrap, .who, .tcard, .dots, mockup classes) still comes from app/globals.css. */
+
+.bb-hero{position:relative;overflow:hidden;color:#FFFFFF;background:radial-gradient(900px 520px at 18% 0%,rgba(70,80,220,.32),transparent 60%),radial-gradient(760px 520px at 92% 12%,rgba(124,58,237,.38),transparent 60%),linear-gradient(135deg,#0A1036 0%,#151A5C 52%,#221468 100%)}
+.bb-hdr *{white-space:nowrap}
+/* Optional photo slot: empty by default, only rendered when public/beyond-bookkeeping/hero-overlay.png exists. Sits above the gradient, below text and card. */
+.bb-hero-overlay{position:absolute;inset:0;z-index:0;pointer-events:none;background-repeat:no-repeat;background-size:auto 100%;background-position:55% bottom;-webkit-mask-image:linear-gradient(to right,transparent 38%,#000 50%,#000 66%,transparent 78%),linear-gradient(to top,transparent 0,#000 12%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 38%,#000 50%,#000 66%,transparent 78%),linear-gradient(to top,transparent 0,#000 12%);mask-composite:intersect;opacity:.85}
+.bb-hero-dots{position:absolute;inset:0;z-index:0;pointer-events:none}
+.bb-hero-inner{position:relative;z-index:1}
+.bb-hero-grid{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,21fr) minmax(0,34fr);gap:0;align-items:center}
+.bb-hero-grid>.bb-hero-copy{grid-column:1}
+.bb-hero-grid>.bb-card{grid-column:3}
+.bb-h1{font-size:clamp(34px,3.7vw,64px);white-space:nowrap}
+.bb-acc{color:#B79BFF}
+.bb-pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;border:1.5px solid rgba(196,181,253,.6);background:rgba(167,139,250,.1);font-size:16px;font-weight:600}
+.bb-shield-note{display:flex;gap:12px;align-items:center;color:#3B3456;padding:2px 10px}
+
+.bb-trust-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:center}
+.bb-trust-grid .trust{gap:10px;padding:6px}
+.bb-trust-text{font-size:14.5px;line-height:1.35;font-weight:600}
+
+.bb-h2{margin:0;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.bb-bar{display:block;width:44px;height:3px;border-radius:2px;background:#6D28D9;margin-top:10px}
+.bb-bar-light{background:#FFFFFF}
+
+.bb-about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
+.bb-mock-panel{position:relative;border-radius:20px;background:linear-gradient(135deg,#F1EDFB,#E1D9F6);padding:22px 14px 22px;overflow:hidden}
+
+.bb-panel{position:relative;overflow:hidden;border-radius:28px;color:#FFFFFF;padding:36px 32px 34px;background:radial-gradient(800px 420px at 90% 0%,rgba(139,92,246,.4),transparent 60%),linear-gradient(135deg,#1C0F52 0%,#3A1FA0 55%,#2A1480 100%)}
+.bb-cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.bb-ccard{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:12px;border:1px solid rgba(196,181,253,.42);background:rgba(255,255,255,.04);color:#FFFFFF}
+.bb-ccard .bb-cicon{transition:transform .25s}
+.bb-ccard:hover .bb-cicon{transform:scale(1.1)}
+
+.bb-three{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr);gap:36px}
+.bb-check{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;background:#7C3AED;color:#FFFFFF}
+.bb-li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;line-height:1.45;color:#1A1433}
+.bb-prog{display:flex;align-items:center;gap:16px;font-size:16.5px;line-height:1.4;color:#1A1433}
+.bb-prog svg{color:#6D28D9}
+.bb-small{display:block;font-size:14px;color:#3B3456}
+
+.bb-cta{position:relative;overflow:hidden;border-radius:28px;color:#FFFFFF;background:linear-gradient(100deg,#3B1D94 0%,#5A2FD0 55%,#4A24B8 100%)}
+.bb-cta-art{position:absolute;left:0;top:0;bottom:0;width:240px;pointer-events:none;-webkit-mask-image:linear-gradient(to right,#000 72%,transparent 100%);mask-image:linear-gradient(to right,#000 72%,transparent 100%)}
+.bb-cta-art svg{position:absolute;left:0;bottom:0;width:100%;height:100%}
+.bb-cta-photo{position:absolute;left:0;top:0;bottom:0;width:clamp(240px,24%,440px);pointer-events:none;background-size:cover;background-position:12% 0%;-webkit-mask-image:linear-gradient(to right,#000 78%,transparent 100%);mask-image:linear-gradient(to right,#000 78%,transparent 100%)}
+.bb-cta-div{position:absolute;left:250px;top:30px;bottom:30px;width:1px;background:rgba(255,255,255,.3);pointer-events:none}
+.bb-cta-photo-on .bb-cta-div{left:clamp(240px,24%,440px)}
+.bb-cta-inner{position:relative;padding:34px 48px 34px 288px}
+.bb-cta-photo-on .bb-cta-inner{padding-left:calc(clamp(240px,24%,440px) + 40px)}
+
+@media (max-width:1280px){
+  .bb-hdr nav{gap:16px!important}
+  .bb-hdr .navlink{font-size:12.5px!important}
+  .bb-hdr>div:last-child{gap:20px!important}
+  .bb-brand svg{width:34px;height:34px}
+  .bb-brand span{font-size:20px!important}
+  .bb-hdr>div:first-child{gap:20px!important}
+}
+@media (max-width:1080px){
+  /* Overlay is hidden on tablet and mobile so the photo can never cover the headline or the form. */
+  .bb-hero-overlay{display:none}
+  .bb-hero-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .bb-hero-grid>.bb-hero-copy,.bb-hero-grid>.bb-card{grid-column:1}
+  .bb-h1{white-space:normal}
+  .bb-trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bb-trust-grid .vline{display:none}
+  .bb-about-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  .bb-three{grid-template-columns:minmax(0,1fr);gap:40px}
+  .bb-three .vline{display:none}
+  .bb-ccard{flex-direction:column;align-items:flex-start;gap:12px}
+  .bb-cta-art{opacity:.3}
+  .bb-cta-photo{opacity:.3}
+  .bb-cta-div{display:none}
+  .bb-cta-inner,.bb-cta-photo-on .bb-cta-inner{padding:34px 40px}
+}
+@media (max-width:760px){
+  .bb-trust-grid{grid-template-columns:minmax(0,1fr)}
+  .bb-cgrid{grid-template-columns:minmax(0,1fr)}
+  .bb-tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bb-ccard{flex-direction:row;align-items:center;gap:16px}
+  .bb-panel{padding:28px 18px 26px}
+  .bb-mock-panel{padding:18px 14px 18px}
+  .bb-cta-inner,.bb-cta-photo-on .bb-cta-inner{padding:30px 22px}
+}
+
+/* Tools You'll Explore tiles */
+.bb-tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.bb-tool{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;padding:14px 6px 12px;border-radius:12px;border:1px solid #DDD6FE;background:#FFFFFF;color:#1A1433}
+.bb-tool .bb-ticon{display:block;width:44px;height:44px;border-radius:10px;transition:transform .25s}
+.bb-tool:hover .bb-ticon{transform:scale(1.1)}
+.bb-tool b{font-size:15px;font-weight:700;line-height:1.2}
+.bb-tool small{font-size:11px;line-height:1.25;color:#6B6585}
+
+/* Mockup: dashboard */
+.bb-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.bb-kpi{background:#FFFFFF;border:1px solid #ECE9F5;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.bb-delta{font-size:10.5px;font-weight:800}
+.bb-delta.is-up{color:#15803D}
+.bb-delta.is-down{color:#B42318}
+.bb-delta.is-flat{color:#6B6585}
+.bb-bars.is-ytd .bar .col{background:#7C3AED}
+.bb-bars .bar{cursor:pointer}
+.bb-legend{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px 6px;width:100%}
+.bb-leg{display:flex;align-items:center;gap:5px;min-width:0;padding:3px 4px;border:0;border-radius:6px;background:transparent;font-family:inherit;font-size:10px;font-weight:600;color:#1A1433;cursor:pointer;text-align:left}
+.bb-leg:hover,.bb-leg.is-active{background:#F5F3FF}
+.bb-leg i{width:8px;height:8px;border-radius:2px;flex:none}
+.bb-donut circle{transition:stroke-width .2s,opacity .2s}
+.bb-ttile{background:#FFFFFF;border-color:#ECE9F5;align-items:center;text-align:center}
+.bb-ttile:hover{background:#FAF8FF}
+.bb-ttile.is-active{background:#F5F3FF;border-color:#A78BFA}
+
+/* About: fact cards under the intro text */
+.bb-facts{display:flex;flex-direction:column;gap:12px;margin-top:10px}
+.bb-fact{display:flex;align-items:center;gap:16px;padding:14px 18px;border-radius:14px;border:1px solid #E4DCFB;background:#FAF8FF;color:#1A1433}
+.bb-fact-icon{width:48px;height:48px;border-radius:12px;background:#EDE9FE;color:#6D28D9;display:flex;align-items:center;justify-content:center;flex:none}
