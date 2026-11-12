@@ -1,0 +1,109 @@
+/* The AI-Powered CEO masterclass page only. Every selector is prefixed .ceo- so nothing here can touch the other pages.
+   Shared look (buttons, inputs, .wrap, .who, .tcard, .dots, mockup classes) still comes from app/globals.css. */
+
+.ceo-hero{position:relative;overflow:hidden;color:#FFFFFF;background:radial-gradient(900px 520px at 18% 0%,rgba(70,80,220,.32),transparent 60%),radial-gradient(760px 520px at 92% 12%,rgba(124,58,237,.38),transparent 60%),linear-gradient(135deg,#0A1036 0%,#151A5C 52%,#221468 100%)}
+.ceo-hdr *{white-space:nowrap}
+/* Optional photo slot: empty by default, only rendered when public/ai-powered-ceo/hero-overlay.png exists. Sits above the gradient, below text and card. */
+.ceo-hero-overlay{position:absolute;inset:0;z-index:0;pointer-events:none;background-repeat:no-repeat;background-size:auto 100%;background-position:center bottom;-webkit-mask-image:linear-gradient(to right,transparent 38%,#000 50%,#000 66%,transparent 78%),linear-gradient(to top,transparent 0,#000 12%);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent 38%,#000 50%,#000 66%,transparent 78%),linear-gradient(to top,transparent 0,#000 12%);mask-composite:intersect;opacity:.9}
+.ceo-hero-dots{position:absolute;inset:0;z-index:0;pointer-events:none}
+.ceo-hero-inner{position:relative;z-index:1}
+.ceo-hero-grid{display:grid;grid-template-columns:minmax(0,45fr) minmax(0,21fr) minmax(0,34fr);gap:0;align-items:center}
+.ceo-hero-grid>.ceo-hero-copy{grid-column:1}
+.ceo-hero-grid>.ceo-card{grid-column:3}
+.ceo-h1{font-size:clamp(34px,3.7vw,64px);white-space:nowrap}
+.ceo-pill{display:inline-flex;align-self:flex-start;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;border:1.5px solid rgba(196,181,253,.6);background:rgba(167,139,250,.1);font-size:16px;font-weight:600}
+.ceo-shield-note{display:flex;gap:12px;align-items:center;color:#3B3456;padding:2px 10px}
+
+.ceo-trust-grid{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;gap:12px;align-items:center}
+.ceo-trust-grid .trust{gap:10px;padding:6px}
+.ceo-trust-text{font-size:14.5px;line-height:1.35;font-weight:600}
+
+.ceo-h2{margin:0;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.ceo-bar{display:block;width:44px;height:3px;border-radius:2px;background:#6D28D9;margin-top:10px}
+.ceo-bar-light{background:#FFFFFF}
+
+.ceo-about-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:40px;align-items:center}
+.ceo-mock-panel{position:relative;border-radius:20px;background:linear-gradient(135deg,#F1EDFB,#E1D9F6);padding:22px 14px 22px;overflow:hidden}
+
+.ceo-panel{position:relative;overflow:hidden;border-radius:28px;color:#FFFFFF;padding:36px 32px 34px;background:radial-gradient(800px 420px at 90% 0%,rgba(139,92,246,.4),transparent 60%),linear-gradient(135deg,#1C0F52 0%,#3A1FA0 55%,#2A1480 100%)}
+.ceo-cgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ceo-ccard{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:12px;border:1px solid rgba(196,181,253,.42);background:rgba(255,255,255,.04);color:#FFFFFF}
+.ceo-ccard .ceo-cicon{transition:transform .25s}
+.ceo-ccard:hover .ceo-cicon{transform:scale(1.1)}
+
+.ceo-three{display:grid;grid-template-columns:minmax(0,1fr) 1px minmax(0,1fr) 1px minmax(0,1fr);gap:36px}
+.ceo-check{width:26px;height:26px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;background:#7C3AED;color:#FFFFFF}
+.ceo-li{display:flex;gap:14px;align-items:flex-start;font-size:16.5px;line-height:1.45;color:#1A1433}
+
+.ceo-prog{display:flex;align-items:center;gap:16px;font-size:16.5px;line-height:1.4;color:#1A1433}
+.ceo-prog svg{color:#6D28D9}
+.ceo-small{display:block;font-size:14px;color:#3B3456}
+
+.ceo-cta{position:relative;overflow:hidden;border-radius:28px;color:#FFFFFF;background:linear-gradient(100deg,#3B1D94 0%,#5A2FD0 55%,#4A24B8 100%)}
+.ceo-cta-art{position:absolute;left:0;top:0;bottom:0;width:240px;pointer-events:none;-webkit-mask-image:linear-gradient(to right,#000 72%,transparent 100%);mask-image:linear-gradient(to right,#000 72%,transparent 100%)}
+.ceo-cta-art svg{position:absolute;left:0;bottom:0;width:100%;height:100%}
+.ceo-cta-photo{position:absolute;left:0;top:0;bottom:0;width:clamp(240px,24%,440px);pointer-events:none;background-size:cover;background-position:12% 0%;-webkit-mask-image:linear-gradient(to right,#000 78%,transparent 100%);mask-image:linear-gradient(to right,#000 78%,transparent 100%)}
+.ceo-cta-div{position:absolute;left:250px;top:30px;bottom:30px;width:1px;background:rgba(255,255,255,.3);pointer-events:none}
+.ceo-cta-photo-on .ceo-cta-div{left:clamp(240px,24%,440px)}
+.ceo-cta-inner{position:relative;padding:34px 48px 34px 288px}
+.ceo-cta-photo-on .ceo-cta-inner{padding-left:calc(clamp(240px,24%,440px) + 40px)}
+.ceo-cta-big{font-size:38px}
+.ceo-cta-small{font-size:30px}
+
+@media (max-width:1280px){
+  .ceo-hdr nav{gap:16px!important}
+  .ceo-hdr .navlink{font-size:12.5px!important}
+  .ceo-hdr>div:last-child{gap:20px!important}
+  .ceo-brand svg{width:34px;height:34px}
+  .ceo-brand span{font-size:20px!important}
+  .ceo-hdr>div:first-child{gap:20px!important}
+}
+@media (max-width:1080px){
+  /* Overlay is hidden on tablet and mobile so the photo can never cover the headline or the form. */
+  .ceo-hero-overlay{display:none}
+  .ceo-hero-grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .ceo-hero-grid>.ceo-hero-copy,.ceo-hero-grid>.ceo-card{grid-column:1}
+  .ceo-h1{white-space:normal}
+  .ceo-trust-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ceo-trust-grid .vline{display:none}
+  .ceo-about-grid{grid-template-columns:minmax(0,1fr);gap:36px}
+  .ceo-three{grid-template-columns:minmax(0,1fr);gap:40px}
+  .ceo-three .vline{display:none}
+  .ceo-ccard{flex-direction:column;align-items:flex-start;gap:12px}
+  .ceo-cta-art{opacity:.3}
+  .ceo-cta-photo{opacity:.3}
+  .ceo-cta-div{display:none}
+  .ceo-cta-inner,.ceo-cta-photo-on .ceo-cta-inner{padding:34px 40px}
+}
+@media (max-width:760px){
+  .ceo-trust-grid{grid-template-columns:minmax(0,1fr)}
+  .ceo-cgrid{grid-template-columns:minmax(0,1fr)}
+  .ceo-ccard{flex-direction:row;align-items:center;gap:16px}
+  .ceo-panel{padding:28px 18px 26px}
+  .ceo-mock-panel{padding:18px 14px 18px}
+  .ceo-cta-inner,.ceo-cta-photo-on .ceo-cta-inner{padding:30px 22px}
+  .ceo-cta-big{font-size:30px}
+  .ceo-cta-small{font-size:24px}
+}
+
+/* Mockup: Overview */
+.ceo-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.ceo-kpi{background:#FFFFFF;border:1px solid #ECE9F5;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.ceo-delta{font-size:10.5px;font-weight:800}
+.ceo-delta.is-up{color:#15803D}
+.ceo-delta.is-down{color:#B42318}
+.ceo-delta.is-flat{color:#6B6585}
+.ceo-bars.is-ytd .bar .col{background:#7C3AED}
+.ceo-bars .bar{cursor:pointer}
+/* Mockup: Apps */
+.ceo-ttile{background:#FFFFFF;border-color:#ECE9F5;align-items:center;text-align:center}
+.ceo-ttile:hover{background:#FAF8FF}
+.ceo-ttile.is-active{background:#F5F3FF;border-color:#A78BFA}
+/* Mockup: AI Assistant */
+.ceo-q{border:1px solid #E4DCFB;background:#FFFFFF;color:#4C1D95;font-family:inherit;font-size:11.5px;font-weight:600;padding:7px 12px;border-radius:999px;cursor:pointer;text-align:left}
+.ceo-q:hover{background:#FAF8FF}
+.ceo-q.is-active{background:#1A1433;border-color:#1A1433;color:#FFFFFF}
+
+/* Fit-ups: long role placeholder inside the narrower desktop/mobile card, and the glance heading on one line */
+@media (min-width:1081px) and (max-width:1400px){.ceo-card select.inp{font-size:12.5px}}
+@media (max-width:480px){.ceo-card select.inp{font-size:12.5px}}
